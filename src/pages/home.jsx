@@ -1,6 +1,5 @@
 import Footer2 from "../components/footer2";
 import Header from "../components/header";
-import CarouselSlider from "../components/carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUpRightDots,
@@ -10,6 +9,11 @@ import {
   faArrowRight,
   faCalendarDays,
 } from "@fortawesome/free-solid-svg-icons";
+import { StatsGrid } from "../components/stateGrid/StatsGrid";
+import PhotoSlider from "../components/carousel";
+import { Container } from "@mantine/core";
+import JobTitleList from "../data/getData";
+
 
 export default function Home() {
   const bgHome = "/src/assets/images/bg1.jpg";
@@ -296,7 +300,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-        <CarouselSlider/>
+      <StatsGrid />
+      <Container className="bg-gray-200">
+        <PhotoSlider />
+      </Container>
+      <div><JobTitleList/></div>
       <div className="w-full bg-gradient-to-r from-blue-950 to-blue-800">
         <Footer2 />
       </div>

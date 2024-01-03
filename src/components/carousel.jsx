@@ -1,37 +1,13 @@
-import { Carousel } from "@mantine/carousel";
+import { Carousel } from '@mantine/carousel';
+import '@mantine/carousel/styles.css';
 
-export default function CarouselSlider() {
+export default function PhotoSlider() {
   return (
-    <Carousel
-      withIndicators
-      height={200}
-      slideSize="33.333333%"
-      slideGap="md"
-      loop
-      align="start"
-      slidesToScroll={3}
-    >
-      <div>
-        <Carousel.Slide className="bg-blue-500">
-          {" "}
-          {/* Apply Tailwind CSS classes */}
-          <div className="text-white text-center">1</div>
-        </Carousel.Slide>
-      </div>
-      <div>
-        <Carousel.Slide className="bg-blue-500">
-          {" "}
-          {/* Apply Tailwind CSS classes */}
-          <div className="text-white text-center">1</div>
-        </Carousel.Slide>
-      </div>
-      <div>
-        <Carousel.Slide className="bg-blue-500">
-          {" "}
-          {/* Apply Tailwind CSS classes */}
-          <div className="text-white text-center">1</div>
-        </Carousel.Slide>
-      </div>
+    <Carousel withIndicators height={200} className='text-center'>
+      <Carousel.Slide>1</Carousel.Slide>
+      <Carousel.Slide>2</Carousel.Slide>
+      <Carousel.Slide>3</Carousel.Slide>
+      {/* ...other slides */}
     </Carousel>
   );
 }
